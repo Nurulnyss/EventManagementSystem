@@ -1,0 +1,5 @@
+FROM tomcat:9.0-jdk11
+RUN rm -rf /usr/local/tomcat/webapps/*
+COPY dist/Event_Management_System.war /usr/local/tomcat/webapps/Event_Management_System.war
+EXPOSE 8080
+CMD ["Catalina.sh", "run"]
